@@ -9,6 +9,10 @@ import { Main } from './Main.js';
 
     document.body.appendChild(app.view);
     const main = new Main();
+    console.dir(app.view);
+    console.dir(main);
+    main.x = (app.view.width - main.width) / 2;
+    main.y = (app.view.height - main.height) / 2;
 
     app.stage.addChild(main);
 })();

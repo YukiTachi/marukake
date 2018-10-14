@@ -7,6 +7,24 @@ module.exports = {
         filename: 'bundle.js'
     },
     devtool: 'source-map',
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            presets: [
+                                '@babel/preset-env'
+                            ]
+                        }
+                    }
+                ],
+                exclude: /node_modules/
+            }
+        ]
+    },
     devServer: {
         contentBase:'dist',
         open: true
