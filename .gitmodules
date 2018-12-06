@@ -1,0 +1,3 @@
+[submodule "assets/ja"]
+	path = assets/ja
+	url = https://github.com/YukiTachi/adding-up.git
