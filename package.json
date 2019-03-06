@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode development"
+    "build": "webpack --mode development",
+    "watch:test": "watch 'npm run sync-test' assets/",
+    "sync-test": "rsync -av assets/ test/"
   },
   "author": "",
   "license": "ISC",
